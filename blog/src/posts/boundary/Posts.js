@@ -1,19 +1,14 @@
 import { savePost } from "../control/PostsControl.js";
 import { html, render } from "../../lib/lit-html.js";
+import IDElement from "../../IDElement.js";
 
-class Posts extends HTMLElement { 
+class Posts extends IDElement { 
 
     constructor() {
         super();
         this.post = {};
     }
 
-    connectedCallback() { 
-
-        const template = this.view();
-        render(template,this);
-
-    }
 
     input(name) { 
         return html`
@@ -21,8 +16,8 @@ class Posts extends HTMLElement {
         `;
 
     }
-
     view() { 
+        console.log('rerendering',this.state);
         return html`
             <h2>posts</h2>
             ${this.input('title')}

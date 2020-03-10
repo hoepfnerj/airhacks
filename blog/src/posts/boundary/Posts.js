@@ -1,4 +1,5 @@
-import { html,render } from "../../lib/lit-html.js";
+import { savePost } from "../control/PostsControl.js";
+import { html, render } from "../../lib/lit-html.js";
 
 class Posts extends HTMLElement { 
 
@@ -36,7 +37,8 @@ class Posts extends HTMLElement {
         this.post[name] = value;
     }
     savePost(e) { 
-        console.log('save',this.post);
+        console.log('save', this.post);
+        savePost(this.post);
     }
 
 }

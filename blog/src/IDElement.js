@@ -16,11 +16,13 @@ export default class IDElement extends HTMLElement {
     
     }
     triggerUpdate() { 
+        // debugger
         this.state = store.getState();
         const template = this.view();
         render(template,this);
     }
-    view() { 
+
+    view() {
 
     }
 

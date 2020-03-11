@@ -1,6 +1,6 @@
 
 export const POST_CREATED = 'POST_CREATED';
-export const posts = (state = { posts: [] }, action) => { 
+export const postsReducer = (state = { posts: [] }, action) => { 
     const { type, payload = {} } = action;
     switch (type) { 
         case POST_CREATED:

@@ -6,7 +6,7 @@ class Overview extends IDElement {
     view() {
         return html`
         <ol>
-            ${this.state.posts.posts.map(({ title, content }) => html`
+            ${this.state.postStore.posts.map(({ title, content }) => html`
                 <li>${title}, ${content}</li>       
             `)}
         </ol>

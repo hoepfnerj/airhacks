@@ -12,6 +12,9 @@ export default class IDElement extends HTMLElement {
         this.triggerUpdate();
     }
     
+    providedInitialDate() { 
+    
+    }
     triggerUpdate() { 
         this.state = store.getState();
         const template = this.view();
